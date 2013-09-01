@@ -1,0 +1,40 @@
+<div class="container">
+  <% Note.all.each do |note| %>
+  <ul>
+    <form action="/edit/<%=note.id%>" method="get"
+      <li>
+        <%= note.text %>
+        <br>
+        <a href="/edit/<%=note.id%>">Click to edit </a> 
+        <br>
+      </li>
+    </ul>
+    <% end %>
+  </div>
+
+  <div class="container">
+    <form action="/" method="get">
+      <a href= "/"> Back to Home </a>
+      <br>
+    </form>
+  </div>
+
+<!-- PART OF DELETE METHOD -->
+  <div class="container">
+    <% Note.all.each do |note| %>
+    <ul>
+      <form action="/delete/<%=note.id%>" method="post">
+        <li>
+         <%= note.text %>
+         <br>
+         <a href="/delete/<%=note.id%>"> Click to delete</a>
+         <br>
+       </li>
+     </ul>
+     <% end %>
+   </div>
+
+
+
+
+
