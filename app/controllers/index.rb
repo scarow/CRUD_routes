@@ -26,9 +26,8 @@ post '/edit' do
   erb :list
 end
 
-#DELETE METHOD NOT WORKING-- WHY?
 get '/delete/:note_id' do
-  Note.destroy(session[:note_id])
+  Note.destroy(params[:note_id])
   erb :destroy
 end
 
